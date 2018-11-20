@@ -1,0 +1,170 @@
+//Colors
+$ruby     : #e0115f;
+$sapphire : #082567;
+$emerald  : #50c878;
+$gold     : #ffd700;
+$silver   : #c0c0c0;
+
+@font-face {
+  font-family: smashbros;
+  src:url('../font/smash.ttf');
+}
+
+html, body {
+  font-family: smashbros;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.nav {
+  position: fixed;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+
+  .nav__all-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .nav__menuitem {
+      color: #ccc;
+      text-decoration: none;
+      background: #333;
+      display: block;
+      padding: .5em 1.5em .5em 1em;
+      margin: .5em 0;
+      border-left: 5px solid transparent;
+      border-radius: 0 2em 2em 0;
+      transition: transform 1s;
+
+      .nav__icon {
+        color: #333;
+        margin: 0 1em;
+        float: right;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &.nav--active .nav__icon{
+        color: #fff;
+      }
+
+    }
+
+    // Colors on hover
+    .nav--ruby {
+      &:hover {
+        color: #fff;
+        background: darken($ruby, 20);
+        border-left: 5px solid #fff;
+      }
+    }
+
+    .nav--sapphire {
+      &:hover {
+        color: #fff;
+        background: darken($sapphire, 10);
+        border-left: 5px solid #fff;
+      }
+    }
+
+    .nav--emerald {
+      &:hover {
+        color: #fff;
+        background: darken($emerald, 20);
+        border-left: 5px solid #fff;
+      }
+    }
+
+    .nav--gold {
+      &:hover {
+        color: #fff;
+        background: darken($gold, 20);
+        border-left: 5px solid #fff;
+      }
+    }
+
+    .nav--silver {
+      &:hover {
+        color: #fff;
+        background: darken($silver, 20);
+        border-left: 5px solid #fff;
+      }
+    }
+
+  }
+
+}
+
+// Pages
+.content {
+  width: 500vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  transition: margin-left .8s ease-in-out;
+
+  .content__page {
+    height: 100vh;
+    padding: 2em 2em 2em 9em;
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    .content__photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .content__photo {
+        max-width: 50%;
+        margin: 1em auto;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+  .content__page--much {
+    display: block;
+    overflow-y: auto;
+  }
+
+  //Page Colors
+  .content--ruby {
+    background: #e0115f;
+  }
+
+  .content--sapphire {
+    background: #082567;
+  }
+
+  .content--emerald {
+    background: #50c878;
+  }
+
+  .content--gold {
+    background: #ffd700;
+    color: #333
+  }
+
+  .content--silver {
+    background: #c0c0c0;
+  }
+  /////////////////////////
+  .content__heading {
+    font-size: 60px;
+  }
+
+  .content__validation {
+    margin-top: -20px;
+  }
+
+}
