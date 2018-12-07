@@ -100,6 +100,22 @@ html, body {
 
   }
 
+  //Arrows
+  .nav__arrows {
+    color: #333;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 0 .2em;
+  }
+
+  .nav__arrow {
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
 }
 
 // Pages

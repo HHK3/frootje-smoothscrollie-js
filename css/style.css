@@ -56,6 +56,15 @@ html, body {
       color: #fff;
       background: #8d8d8d;
       border-left: 5px solid #fff; }
+  .nav .nav__arrows {
+    color: #333;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 0 .2em; }
+  .nav .nav__arrow:hover {
+    color: #fff;
+    cursor: pointer; }
 
 .content {
   width: 500vw;
